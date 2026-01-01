@@ -1,21 +1,28 @@
 {
     "name": "vscode-markdown-auto-preview",
     "displayName": "Markdown Auto Preview",
-    "description": "Automatically opens preview for markdown files",
-    "version": "0.0.1",
+    "description": "Automatically opens the Markdown Preview when you open a Markdown file.",
+    "publisher": "local",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.90.0"
     },
     "categories": [
         "Other"
     ],
-    "activationEvents": [],
+    "activationEvents": [
+        "onLanguage:markdown"
+    ],
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
             {
-                "command": "vscode-markdown-auto-preview.helloWorld",
-                "title": "Hello World"
+                "command": "vscode-markdown-auto-preview.togglePreview",
+                "title": "Open Preview (Toggle)"
+            },
+            {
+                "command": "vscode-markdown-auto-preview.showSource",
+                "title": "Open Source"
             }
         ]
     },
